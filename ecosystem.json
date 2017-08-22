@@ -1,0 +1,29 @@
+{
+    "apps": [
+    {
+      "name": "cms-backend",
+      "script": "app.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "manager",
+      "host": ["47.94.142.19"],
+      "port": "3000",
+      "ref": "origin/master",
+      "repo": "git@git.oschina.net:mmming0821/cms-backend.git",
+      "path": "/www/api/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "cnpm install && pm2 startOrRestart ecosystem.json --env production",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

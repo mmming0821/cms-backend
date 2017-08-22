@@ -1,0 +1,15 @@
+{
+  "name": "cms",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "moment": "^2.18.1",
+    "mongoose": "^4.10.6",
+    "multer": "^1.3.0"
+  }
+}
